@@ -31,8 +31,9 @@ public class MyQueue<E> {
         return temp;
     }
 
-    public E peek(int i){
-        return elements[i];
+    public E peek(){
+        if (isEmpty()) return null;
+        return elements[size-1];
     }
 
     public boolean isEmpty(){
@@ -41,7 +42,7 @@ public class MyQueue<E> {
 
     public void printQueue(){
         for (int i = 0; i < size; i++) {
-            System.out.print(peek(i)+"\t");
+            System.out.print(elements[i] +"\t");
         }
     }
 
